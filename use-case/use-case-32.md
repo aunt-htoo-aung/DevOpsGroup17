@@ -10,7 +10,7 @@
 - **Level:** User-Goal Level
 
 ---
-
+  
 ## Context & Triggers
 
 - **Goal in Context:** The Demographic Analyst wants to extract and evaluate the global speaker counts and percentage of total world population for five major languages (Chinese, English, Hindi, Spanish, and Arabic), organized from greatest to smallest number of speakers, to analyze global linguistic demographics.
