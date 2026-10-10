@@ -2,7 +2,7 @@
 
 ### Header & Identification
 
-- **Use Case ID:** UC-23
+- **Use Case ID:** UC-26
 - **Use Case Name:** Produce Continent Population Distribution Report
 - **Primary Actor:** Demographic Analyst
 - **Scope:** Population Reporting System
