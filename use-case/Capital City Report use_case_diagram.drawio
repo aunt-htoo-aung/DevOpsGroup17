@@ -13,9 +13,6 @@
         <mxCell id="EA8Tjyfy-W5CVIiv8rJI-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size:9.0pt;mso-bidi-font-size:11.0pt;&lt;br/&gt;line-height:115%;font-family:&amp;quot;Cambria&amp;quot;,serif;mso-ascii-theme-font:minor-latin;&lt;br/&gt;mso-fareast-font-family:&amp;quot;MS Mincho&amp;quot;;mso-fareast-theme-font:minor-fareast;&lt;br/&gt;mso-hansi-theme-font:minor-latin;mso-bidi-font-family:&amp;quot;Myanmar Text&amp;quot;;&lt;br/&gt;mso-bidi-theme-font:minor-bidi;mso-ansi-language:EN-US;mso-fareast-language:&lt;br/&gt;EN-US;mso-bidi-language:AR-SA&quot;&gt;Capital City Reports&lt;/span&gt;&lt;/div&gt;" vertex="1">
           <mxGeometry height="60" width="120" x="150" y="300" as="geometry" />
         </mxCell>
-        <mxCell id="EA8Tjyfy-W5CVIiv8rJI-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="&amp;nbsp;report of all world capital cities by population" vertex="1">
-          <mxGeometry height="70" width="130" x="450" y="130" as="geometry" />
-        </mxCell>
         <mxCell id="EA8Tjyfy-W5CVIiv8rJI-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="report of all continent capital cities by population" vertex="1">
           <mxGeometry height="70" width="120" x="460" y="220" as="geometry" />
         </mxCell>
@@ -116,6 +113,9 @@
         </mxCell>
         <mxCell id="EA8Tjyfy-W5CVIiv8rJI-36" parent="EA8Tjyfy-W5CVIiv8rJI-35" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Population Report System" vertex="1">
           <mxGeometry height="30" width="150" x="5" y="15" as="geometry" />
+        </mxCell>
+        <mxCell id="EA8Tjyfy-W5CVIiv8rJI-3" parent="EA8Tjyfy-W5CVIiv8rJI-35" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="&amp;nbsp;report of all world capital cities by population" vertex="1">
+          <mxGeometry height="70" width="130" x="330" y="45" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
