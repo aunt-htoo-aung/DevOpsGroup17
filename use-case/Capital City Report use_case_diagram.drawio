@@ -112,7 +112,7 @@
           <mxGeometry height="30" width="150" x="5" y="15" as="geometry" />
         </mxCell>
         <mxCell id="EA8Tjyfy-W5CVIiv8rJI-3" parent="EA8Tjyfy-W5CVIiv8rJI-35" style="ellipse;whiteSpace=wrap;html=1;shapeInside=1;" value="&amp;nbsp;report of all world capital cities by population" vertex="1">
-          <mxGeometry height="70" width="130" x="330" y="75" as="geometry" />
+          <mxGeometry height="70" width="130" x="340" y="65" as="geometry" />
         </mxCell>
         <mxCell id="EA8Tjyfy-W5CVIiv8rJI-23" parent="EA8Tjyfy-W5CVIiv8rJI-35" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;rotation=-45;" value="&amp;lt;&amp;lt;Include&amp;gt;&amp;gt;" vertex="1">
           <mxGeometry height="30" width="60" x="210" y="155" as="geometry" />
