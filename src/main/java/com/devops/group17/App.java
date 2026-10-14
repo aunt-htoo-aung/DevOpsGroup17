@@ -1,5 +1,6 @@
 package com.devops.group17;
 
+import com.devops.group17.CityReport.CityReportService;
 import com.devops.group17.LanguageReport.LanguageReportService;
 
 public class App {
@@ -12,9 +13,12 @@ public class App {
             try {
                 // Create Service
                 LanguageReportService languageReportService = new LanguageReportService(con);
+                CityReportService cityReportService = new CityReportService(con);
 
                 // Display the language report
+                cityReportService.displayCityReport();
                 languageReportService.displayLanguageReport();
+
 
             } finally {
                 try {
