@@ -1,0 +1,51 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram id="lang_report_usecase" name="UC-06: Language Speaker Report Use Case">
+    <mxGraphModel dx="1153" dy="835" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="650" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="390" width="390" x="220" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-15" edge="1" parent="1" source="k-9HzK4zZQiR4Z0hLGzq-1" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="k-9HzK4zZQiR4Z0hLGzq-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-1" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" value="Demographic Analyst" vertex="1">
+          <mxGeometry height="60" width="30" x="91" y="690" as="geometry" />
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-2" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Global Language Speaker Report" vertex="1">
+          <mxGeometry height="80" width="180" x="250" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-12" edge="1" parent="1" source="k-9HzK4zZQiR4Z0hLGzq-3" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="k-9HzK4zZQiR4Z0hLGzq-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-3" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;" value="&lt;div class=&quot;markdown markdown-main-panel md-content enable-luminous-fast-follows enable-updated-hr-color stronger tutor-markdown-rendering&quot; id=&quot;model-response-message-contentr_810464d9efa1c999&quot; aria-busy=&quot;false&quot; aria-live=&quot;polite&quot; dir=&quot;ltr&quot; style=&quot;--animation-duration: 400ms; --fade-animation-function: ease-out; animation: auto ease 0s 1 normal none running none; appearance: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px rgb(31, 31, 31); inset: auto; clear: none; clip: auto; columns: auto; contain: none; container: none; content: normal; cursor: auto; cx: 0px; cy: 0px; d: none; direction: ltr; fill: rgb(0, 0, 0); filter: none; flex: 0 1 auto; flex-direction: row; float: none; gap: normal; hyphens: manual; interactivity: auto; isolation: auto; margin-bottom: 0px; marker: none; mask: none; offset: normal; opacity: 1; order: 0; outline: rgb(31, 31, 31) none 2.66667px; overlay: none; padding: 0px; page: auto; perspective: none; position: static; quotes: auto; r: 0px; resize: none; rotate: none; rx: auto; ry: auto; scale: none; speak: normal; stroke: none; transform: none; transition: all; translate: none; visibility: visible; x: 0px; y: 0px; zoom: 1; margin-top: 0px !important; margin-right: 0px !important; margin-left: 0px !important; line-height: 1.15 !important; color: rgb(31, 31, 31);&quot;&gt;&lt;div style=&quot;animation: auto ease 0s 1 normal none running none; appearance: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px rgb(31, 31, 31); inset: auto; clear: none; clip: auto; columns: auto; contain: none; container: none; content: normal; cursor: auto; cx: 0px; cy: 0px; d: none; direction: ltr; fill: rgb(0, 0, 0); filter: none; flex: 0 1 auto; flex-direction: row; float: none; gap: normal; hyphens: manual; interactivity: auto; isolation: auto; margin-bottom: 0px; marker: none; mask: none; offset: normal; opacity: 1; order: 0; outline: rgb(31, 31, 31) none 2.66667px; overlay: none; padding: 0px; page: auto; perspective: none; position: static; quotes: auto; r: 0px; resize: none; rotate: none; rx: auto; ry: auto; scale: none; speak: normal; stroke: none; transform: none; transition: all; translate: none; visibility: visible; x: 0px; y: 0px; zoom: 1; margin-top: 0px !important; margin-right: 0px !important; margin-left: 0px !important; line-height: 1.15 !important;&quot;&gt;&lt;font face=&quot;Google Sans Text, sans-serif&quot; style=&quot;color: rgb(255, 255, 255);&quot;&gt;Top Five World Languages&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;animation: auto ease 0s 1 normal none running none; appearance: none; background: none 0% 0% / auto repeat scroll padding-box border-box rgba(0, 0, 0, 0); border: 0px rgb(31, 31, 31); inset: auto; clear: none; clip: auto; columns: auto; contain: none; container: none; content: normal; cursor: auto; cx: 0px; cy: 0px; d: none; direction: ltr; fill: rgb(0, 0, 0); filter: none; flex: 0 1 auto; flex-direction: row; float: none; gap: normal; hyphens: manual; interactivity: auto; isolation: auto; margin-bottom: 0px; marker: none; mask: none; offset: normal; opacity: 1; order: 0; outline: rgb(31, 31, 31) none 2.66667px; overlay: none; padding: 0px; page: auto; perspective: none; position: static; quotes: auto; r: 0px; resize: none; rotate: none; rx: auto; ry: auto; scale: none; speak: normal; stroke: none; transform: none; transition: all; translate: none; visibility: visible; x: 0px; y: 0px; zoom: 1; margin-top: 0px !important; margin-right: 0px !important; margin-left: 0px !important; line-height: 1.15 !important;&quot;&gt;&lt;font face=&quot;Google Sans Text, sans-serif&quot; style=&quot;color: rgb(255, 255, 255);&quot;&gt;by Speakers and Global Percentage&lt;/font&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="80" width="220" x="350" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-6" edge="1" parent="1" source="k-9HzK4zZQiR4Z0hLGzq-2" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="k-9HzK4zZQiR4Z0hLGzq-3" value="">
+          <mxGeometry relative="1" width="160" as="geometry">
+            <mxPoint x="430" y="719.44" as="sourcePoint" />
+            <mxPoint x="590" y="719.44" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-7" connectable="0" parent="k-9HzK4zZQiR4Z0hLGzq-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="Include" vertex="1">
+          <mxGeometry relative="1" x="-0.348" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-13" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="120" width="140" x="650" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-8" parent="k-9HzK4zZQiR4Z0hLGzq-13" style="shape=cylinder;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;" value="" vertex="1">
+          <mxGeometry height="80" width="60" x="40" as="geometry" />
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-9" parent="k-9HzK4zZQiR4Z0hLGzq-13" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="World Population Database" vertex="1">
+          <mxGeometry height="30" width="140" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="k-9HzK4zZQiR4Z0hLGzq-16" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Population Reporting System" vertex="1">
+          <mxGeometry height="30" width="220" x="200" y="610" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
