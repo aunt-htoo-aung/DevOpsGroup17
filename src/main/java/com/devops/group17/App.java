@@ -13,13 +13,13 @@ public class App {
         if (con != null) {
             try {
                 // Create Service
-//                LanguageReportService languageReportService = new LanguageReportService(con);
-//                CityReportService cityReportService = new CityReportService(con);
+                LanguageReportService languageReportService = new LanguageReportService(con);
+                CityReportService cityReportService = new CityReportService(con);
                 CapitalCityReportService capitalCityReportService = new CapitalCityReportService(con);
 
                 // Display the language report
-//                cityReportService.displayCityReport();
-//                languageReportService.displayLanguageReport();
+                cityReportService.displayCityReport();
+                languageReportService.displayLanguageReport();
 
                 // Display the Capital Report
                 capitalCityReportService.displayWorldCapitalCities();                    // UC-17
