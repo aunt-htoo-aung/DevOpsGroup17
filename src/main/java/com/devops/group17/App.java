@@ -2,6 +2,7 @@ package com.devops.group17;
 
 import com.devops.group17.CityReport.CityReportService;
 import com.devops.group17.LanguageReport.LanguageReportService;
+import com.devops.group17.CountryReport.CountryReportService;
 
 public class App {
     public static void main(String[] args) {
@@ -14,10 +15,12 @@ public class App {
                 // Create Service
                 LanguageReportService languageReportService = new LanguageReportService(con);
                 CityReportService cityReportService = new CityReportService(con);
+                CountryReportService countryReportService = new CountryReportService(con);
 
                 // Display the language report
-                cityReportService.displayCityReport();
-                languageReportService.displayLanguageReport();
+                //cityReportService.displayCityReport();
+                //languageReportService.displayLanguageReport();
+                countryReportService.displayAll();
 
 
             } finally {
