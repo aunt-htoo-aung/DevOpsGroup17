@@ -23,8 +23,7 @@ public class PopulationLookupReportService {
 
     /**
      * Executes a population lookup report by keyword and displays results
-     *
-     * @param searchTerm The keyword (city, country, continent, or region) to look up.
+     * The keyword is (city, country, continent, or region) to look up.
      */
     public void displayPopulationLookupReport(String searchTerm) {
         System.out.println("Displaying population lookup report for keyword: '" + searchTerm + "'");
