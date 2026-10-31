@@ -19,9 +19,9 @@ public class App {
                 CapitalCityReportService capitalCityReportService = new CapitalCityReportService(con);
                 CountryReportService countryReportService = new CountryReportService(con);
 
-                // Display the language report
-                //cityReportService.displayCityReport();
-                //languageReportService.displayLanguageReport();
+//                 Display the language report
+                cityReportService.displayCityReport();
+                languageReportService.displayLanguageReport();
                 countryReportService.displayAll();
 
                 // Display the language report
