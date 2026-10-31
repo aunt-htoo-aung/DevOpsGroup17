@@ -25,7 +25,9 @@ public class App {
                 capitalCityReportService.displayWorldCapitalCities();                    // UC-17
                 capitalCityReportService.displayContinentCapitalCities("Asia");          // UC-18
                 capitalCityReportService.displayRegionCapitalCities("Western Europe");   // UC-19
-
+                capitalCityReportService.displayTopNWorldCapitalCities(10);                    // UC-20
+                capitalCityReportService.displayTopNContinentCapitalCities("Europe", 5);       // UC-21
+                capitalCityReportService.displayTopNRegionCapitalCities("Western Europe", 5);  // UC-22
             } finally {
                 try {
                     con.close();
