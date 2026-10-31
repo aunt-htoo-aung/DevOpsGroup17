@@ -17,6 +17,7 @@ public class LanguageReportService {
         this.languageReportDAO = new LanguageReportDAO(con);
     }
 
+
     /**
      * Fetches the language report data and prints it as a table.
      */
