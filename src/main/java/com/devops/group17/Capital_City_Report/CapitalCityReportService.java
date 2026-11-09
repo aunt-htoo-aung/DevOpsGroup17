@@ -6,7 +6,7 @@ import java.sql.Connection;
 import java.util.*;
 
 /**
- * Service layer for the Capital City Reports (UC-17, UC-18, UC-19).
+ * Service layer for the Capital City Reports (UC-17 to UC-22).
  * Validates input, fetches data from the DAO, converts it to map format,
  * and prints it via Utils.
  */
@@ -55,6 +55,55 @@ public class CapitalCityReportService {
     }
 
     /**
+     * UC-20: Fetches the top N populated capital cities in the world and prints them as a table.
+     *
+     * @param n the number of capital cities to display
+     */
+    public void displayTopNWorldCapitalCities(int n) {
+        System.out.println("Display top " + n + " capital cities in the world");
+        if (!isValidN(n)) {
+            return;
+        }
+        print(capitalCityReportDAO.getTopNWorldCapitalCities(n), null);
+    }
+
+    /**
+     * UC-21: Fetches the top N populated capital cities in a continent and prints them as a table.
+     *
+     * @param continent the continent name (e.g. Asia)
+     * @param n         the number of capital cities to display
+     */
+    public void displayTopNContinentCapitalCities(String continent, int n) {
+        System.out.println("Display top " + n + " capital cities in continent: " + continent);
+        if (!isValidN(n)) {
+            return;
+        }
+        if (isBlank(continent)) {
+            System.out.println("Invalid input. Please enter a valid continent.");
+            return;
+        }
+        print(capitalCityReportDAO.getTopNContinentCapitalCities(continent.trim(), n), "continent");
+    }
+
+    /**
+     * UC-22: Fetches the top N populated capital cities in a region and prints them as a table.
+     *
+     * @param region the region name (e.g. Western Europe)
+     * @param n      the number of capital cities to display
+     */
+    public void displayTopNRegionCapitalCities(String region, int n) {
+        System.out.println("Display top " + n + " capital cities in region: " + region);
+        if (!isValidN(n)) {
+            return;
+        }
+        if (isBlank(region)) {
+            System.out.println("Invalid input. Please enter a valid region.");
+            return;
+        }
+        print(capitalCityReportDAO.getTopNRegionCapitalCities(region.trim(), n), "region");
+    }
+
+    /**
      * Converts the DTOs to maps and prints them as a table.
      * Prints the use-case error messages when the query failed or returned no rows.
      *
@@ -90,6 +139,14 @@ public class CapitalCityReportService {
         });
 
         Utils.printTable(mapData);
+    }
+
+    private boolean isValidN(int n) {
+        if (n <= 0) {
+            System.out.println("Invalid input. N must be a positive whole number.");
+            return false;
+        }
+        return true;
     }
 
     private boolean isBlank(String value) {

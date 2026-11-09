@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * Data Access Object for the Capital City Reports (UC-17, UC-18, UC-19).
+ * Data Access Object for the Capital City Reports (UC-17 to UC-22).
  * Executes the queries and returns data as a list of DTOs.
  * A capital city is the city referenced by country.Capital.
  */
@@ -22,7 +22,7 @@ public class CapitalCityReportDAO {
                     + "FROM country "
                     + "JOIN city ON country.Capital = city.ID ";
 
-    private static final String ORDER_BY = "ORDER BY city.Population DESC, city.Name ASC";
+    private static final String ORDER_BY = "ORDER BY city.Population DESC, city.Name ASC ";
 
     private final Connection con;
 
@@ -37,7 +37,7 @@ public class CapitalCityReportDAO {
      * @return Optional containing the list of CapitalCityReport DTOs, or empty if query fails
      */
     public Optional<List<CapitalCityReport>> getWorldCapitalCities() {
-        return execute(BASE_QUERY + ORDER_BY, null);
+        return execute(BASE_QUERY + ORDER_BY, null, null);
     }
 
     /**
@@ -48,7 +48,7 @@ public class CapitalCityReportDAO {
      * @return Optional containing the list of CapitalCityReport DTOs, or empty if query fails
      */
     public Optional<List<CapitalCityReport>> getContinentCapitalCities(String continent) {
-        return execute(BASE_QUERY + "WHERE country.Continent = ? " + ORDER_BY, continent);
+        return execute(BASE_QUERY + "WHERE country.Continent = ? " + ORDER_BY, continent, null);
     }
 
     /**
@@ -59,22 +59,59 @@ public class CapitalCityReportDAO {
      * @return Optional containing the list of CapitalCityReport DTOs, or empty if query fails
      */
     public Optional<List<CapitalCityReport>> getRegionCapitalCities(String region) {
-        return execute(BASE_QUERY + "WHERE country.Region = ? " + ORDER_BY, region);
+        return execute(BASE_QUERY + "WHERE country.Region = ? " + ORDER_BY, region, null);
     }
 
     /**
-     * Runs a prepared query with an optional filter value.
+     * UC-20: Retrieves the top N populated capital cities in the world.
+     *
+     * @param n the number of capital cities to return
+     * @return Optional containing the list of CapitalCityReport DTOs, or empty if query fails
+     */
+    public Optional<List<CapitalCityReport>> getTopNWorldCapitalCities(int n) {
+        return execute(BASE_QUERY + ORDER_BY + "LIMIT ?", null, n);
+    }
+
+    /**
+     * UC-21: Retrieves the top N populated capital cities in a continent.
+     *
+     * @param continent the continent name (e.g. Asia)
+     * @param n         the number of capital cities to return
+     * @return Optional containing the list of CapitalCityReport DTOs, or empty if query fails
+     */
+    public Optional<List<CapitalCityReport>> getTopNContinentCapitalCities(String continent, int n) {
+        return execute(BASE_QUERY + "WHERE country.Continent = ? " + ORDER_BY + "LIMIT ?", continent, n);
+    }
+
+    /**
+     * UC-22: Retrieves the top N populated capital cities in a region.
+     *
+     * @param region the region name (e.g. Western Europe)
+     * @param n      the number of capital cities to return
+     * @return Optional containing the list of CapitalCityReport DTOs, or empty if query fails
+     */
+    public Optional<List<CapitalCityReport>> getTopNRegionCapitalCities(String region, int n) {
+        return execute(BASE_QUERY + "WHERE country.Region = ? " + ORDER_BY + "LIMIT ?", region, n);
+    }
+
+    /**
+     * Runs a prepared query with an optional filter value and an optional row limit.
      *
      * @param query  the SQL to run
-     * @param filter value for the single placeholder, or null if the query has none
+     * @param filter value for the continent/region placeholder, or null if the query has none
+     * @param limit  value for the LIMIT placeholder, or null if the query has none
      * @return Optional containing the list of DTOs, or empty if the query fails
      */
-    private Optional<List<CapitalCityReport>> execute(String query, String filter) {
+    private Optional<List<CapitalCityReport>> execute(String query, String filter, Integer limit) {
         List<CapitalCityReport> reports = new ArrayList<>();
 
         try (PreparedStatement stmt = con.prepareStatement(query)) {
+            int index = 1;
             if (filter != null) {
-                stmt.setString(1, filter);
+                stmt.setString(index++, filter);
+            }
+            if (limit != null) {
+                stmt.setInt(index, limit);
             }
 
             try (ResultSet rs = stmt.executeQuery()) {
