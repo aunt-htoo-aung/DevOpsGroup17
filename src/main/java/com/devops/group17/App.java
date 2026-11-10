@@ -9,7 +9,14 @@ public class App {
     public static void main(String[] args) {
 
         // Get database connection
-        java.sql.Connection con = Connection.getConnection();
+        java.sql.Connection con;
+        if (args.length < 1) {
+            con = Connection.getConnection();
+        } else {
+            String location = args[0];
+            int delay = args.length > 1 ? Integer.parseInt(args[1]) : 10000;
+            con = Connection.getConnection(location, delay);
+        }
 
         if (con != null) {
             try {
