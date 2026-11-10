@@ -17,22 +17,33 @@ public class LanguageReportService {
         this.languageReportDAO = new LanguageReportDAO(con);
     }
 
+    public LanguageReportService(LanguageReportDAO languageReportDAO) {
+        this.languageReportDAO = languageReportDAO;
+    }
 
     /**
      * Fetches the language report data and prints it as a table.
      */
     public void displayLanguageReport() {
-        Optional<List<LanguageReport>> reports = languageReportDAO.getLanguageReport();
         System.out.println("Display language report");
+        Optional<List<LanguageReport>> reports = languageReportDAO != null ? languageReportDAO.getLanguageReport() : Optional.empty();
+        if (reports == null) {
+            reports = Optional.empty();
+        }
+
         // Convert List<LanguageReport> to List<Map<String, Object>> for generic printing
         Optional<List<Map<String, Object>>> mapData = reports.map(list -> {
             List<Map<String, Object>> rows = new ArrayList<>();
-            for (LanguageReport r : list) {
-                Map<String, Object> row = new LinkedHashMap<>();
-                row.put("Language", r.getLanguage());
-                row.put("Total Speakers", r.getTotalSpeakers());
-                row.put("World Percentage (%)", r.getWorldPercentage());
-                rows.add(row);
+            if (list != null) {
+                for (LanguageReport r : list) {
+                    if (r != null) {
+                        Map<String, Object> row = new LinkedHashMap<>();
+                        row.put("Language", r.getLanguage());
+                        row.put("Total Speakers", r.getTotalSpeakers());
+                        row.put("World Percentage (%)", r.getWorldPercentage());
+                        rows.add(row);
+                    }
+                }
             }
             return rows;
         });
