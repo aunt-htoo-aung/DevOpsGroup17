@@ -22,6 +22,11 @@ public class CountryReportService {
         this.countryReportDAO = new CountryReportDAO(con);
     }
 
+    // Constructor for unit testing
+    public CountryReportService(CountryReportDAO countryReportDAO) {
+        this.countryReportDAO = countryReportDAO;
+    }
+
     // UC-1: All countries worldwide
     public void displayAll() {
         // Display all Country Reports (UC-1 to UC-6)
