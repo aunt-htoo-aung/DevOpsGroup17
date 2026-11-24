@@ -34,9 +34,6 @@ public class CityReportService {
         Utils.printTable(mapData);
     }
 
-    /**
-     * Master method to execute the core city reports.
-     */
     public void displayAll() {
         displayCityReport();
     }
@@ -64,5 +61,30 @@ public class CityReportService {
     // [Req 11] All the cities in a district
     public void displayCityReportByDistrict(String district) {
         printReport(cityReportDAO.getCityReportByDistrict(district), "Cities in District: " + district);
+    }
+
+    // [Req 12] Top N populated cities in the world
+    public void displayTopNWorldCities(int n) {
+        printReport(cityReportDAO.getTopNWorldCities(n), "Top " + n + " Cities in the World");
+    }
+
+    // [Req 13] Top N populated cities in a continent
+    public void displayTopNContinentCities(String continent, int n) {
+        printReport(cityReportDAO.getTopNContinentCities(continent, n), "Top " + n + " Cities in Continent: " + continent);
+    }
+
+    // [Req 14] Top N populated cities in a region
+    public void displayTopNRegionCities(String region, int n) {
+        printReport(cityReportDAO.getTopNRegionCities(region, n), "Top " + n + " Cities in Region: " + region);
+    }
+
+    // [Req 15] Top N populated cities in a country
+    public void displayTopNCountryCities(String country, int n) {
+        printReport(cityReportDAO.getTopNCountryCities(country, n), "Top " + n + " Cities in Country: " + country);
+    }
+
+    // [Req 16] Top N populated cities in a district
+    public void displayTopNDistrictCities(String district, int n) {
+        printReport(cityReportDAO.getTopNDistrictCities(district, n), "Top " + n + " Cities in District: " + district);
     }
 }

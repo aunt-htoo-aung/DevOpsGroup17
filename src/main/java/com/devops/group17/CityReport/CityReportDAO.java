@@ -77,4 +77,44 @@ public class CityReportDAO {
                 "WHERE city.District = ? ORDER BY city.Population DESC;";
         return executeQuery(query, district);
     }
+
+    // [Req 12] Top N populated cities in the world
+    public Optional<List<CityReport>> getTopNWorldCities(int n) {
+        String query = "SELECT city.Name AS City, country.Name AS Country, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "ORDER BY city.Population DESC LIMIT ?;";
+        return executeQuery(query, n);
+    }
+
+    // [Req 13] Top N populated cities in a continent
+    public Optional<List<CityReport>> getTopNContinentCities(String continent, int n) {
+        String query = "SELECT city.Name AS City, country.Name AS Country, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Continent = ? ORDER BY city.Population DESC LIMIT ?;";
+        return executeQuery(query, continent, n);
+    }
+
+    // [Req 14] Top N populated cities in a region
+    public Optional<List<CityReport>> getTopNRegionCities(String region, int n) {
+        String query = "SELECT city.Name AS City, country.Name AS Country, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Region = ? ORDER BY city.Population DESC LIMIT ?;";
+        return executeQuery(query, region, n);
+    }
+
+    // [Req 15] Top N populated cities in a country
+    public Optional<List<CityReport>> getTopNCountryCities(String country, int n) {
+        String query = "SELECT city.Name AS City, country.Name AS Country, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "WHERE country.Name = ? ORDER BY city.Population DESC LIMIT ?;";
+        return executeQuery(query, country, n);
+    }
+
+    // [Req 16] Top N populated cities in a district
+    public Optional<List<CityReport>> getTopNDistrictCities(String district, int n) {
+        String query = "SELECT city.Name AS City, country.Name AS Country, city.District, city.Population " +
+                "FROM city JOIN country ON city.CountryCode = country.Code " +
+                "WHERE city.District = ? ORDER BY city.Population DESC LIMIT ?;";
+        return executeQuery(query, district, n);
+    }
 }
