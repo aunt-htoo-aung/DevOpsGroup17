@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 
->>>>>>> develop
 package com.devops.group17.CountryReport;
 
 import com.devops.group17.utility.Utils;
@@ -15,12 +12,7 @@ import java.util.Optional;
 
 /**
  * Service layer for the Country Report.
-<<<<<<< HEAD
- * Fetches data from the DAO, converts it to a generic map format,
- * and prints the report as a table.
-=======
  * Fetches data from the DAO and displays the report.
->>>>>>> develop
  */
 public class CountryReportService {
 
@@ -29,22 +21,6 @@ public class CountryReportService {
     public CountryReportService(Connection con) {
         this.countryReportDAO = new CountryReportDAO(con);
     }
-<<<<<<< HEAD
-    public void displayAll(){
-        displayCountryReport();
-    }
-    /**
-     * Fetches the country report data and prints it as a table.
-     */
-    public void displayCountryReport() {
-        Optional<List<CountryReport>> reports =
-                countryReportDAO.getCountryReport();
-
-        System.out.println("Display country report");
-
-        // Convert List<CountryReport> to List<Map<String, Object>>
-        // for generic table printing.
-=======
 
     // Constructor for unit testing
     public CountryReportService(CountryReportDAO countryReportDAO) {
@@ -55,24 +31,24 @@ public class CountryReportService {
     public void displayAll() {
         // Display all Country Reports (UC-1 to UC-6)
 
-            // UC-1: All countries worldwide
-            displayCountryReport();
+        // UC-1: All countries worldwide
+        displayCountryReport();
 
-            // UC-2: All countries in Asia
-            displayCountriesByContinent("Asia");
+        // UC-2: All countries in Asia
+        displayCountriesByContinent("Asia");
 
-            // UC-3: All countries in Western Europe
-            displayCountriesByRegion("Western Europe");
+        // UC-3: All countries in Western Europe
+        displayCountriesByRegion("Western Europe");
 
-            // UC-4: Top 10 populated countries worldwide
-            displayTopNWorldCountries(10);
+        // UC-4: Top 10 populated countries worldwide
+        displayTopNWorldCountries(10);
 
-            // UC-5: Top 5 populated countries in Europe
-            displayTopNContinentCountries("Europe", 5);
+        // UC-5: Top 5 populated countries in Europe
+        displayTopNContinentCountries("Europe", 5);
 
-            // UC-6: Top 5 populated countries in Western Europe
-            displayTopNRegionCountries("Western Europe", 5);
-        }
+        // UC-6: Top 5 populated countries in Western Europe
+        displayTopNRegionCountries("Western Europe", 5);
+    }
 
 
     public void displayCountryReport() {
@@ -116,7 +92,6 @@ public class CountryReportService {
 
         System.out.println("\n" + title);
 
->>>>>>> develop
         Optional<List<Map<String, Object>>> mapData = reports.map(list -> {
 
             List<Map<String, Object>> rows = new ArrayList<>();
@@ -140,8 +115,4 @@ public class CountryReportService {
 
         Utils.printTable(mapData);
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> develop
