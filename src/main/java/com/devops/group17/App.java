@@ -10,7 +10,14 @@ public class App {
     public static void main(String[] args) {
 
         // Get database connection
-        java.sql.Connection con = Connection.getConnection();
+        java.sql.Connection con;
+        if (args.length < 1) {
+            con = Connection.getConnection();
+        } else {
+            String location = args[0];
+            int delay = args.length > 1 ? Integer.parseInt(args[1]) : 10000;
+            con = Connection.getConnection(location, delay);
+        }
 
         if (con != null) {
             try {
@@ -18,24 +25,27 @@ public class App {
                 LanguageReportService languageReportService = new LanguageReportService(con);
                 CityReportService cityReportService = new CityReportService(con);
                 CapitalCityReportService capitalCityReportService = new CapitalCityReportService(con);
-                               CountryReportService countryReportService = new CountryReportService(con);
+                CountryReportService countryReportService = new CountryReportService(con);
 
 //                 Display the language report
                 cityReportService.displayCityReport();
-                languageReportService.displayLanguageReport();
+
+
+            //    languageReportService.displayLanguageReport();
+
+                //Display country reports
                 countryReportService.displayAll();
-                                PopulationReportService populationService = new PopulationReportService(con);
-                populationService.displayContinentPopulationReport();
-                populationService.displayRegionPopulationReport();
 
                 // Display the language report
 //                cityReportService.displayCityReport();
 //                languageReportService.displayLanguageReport();
-
-                // Display the Capital Report
-                capitalCityReportService.displayWorldCapitalCities();                    // UC-17
-                capitalCityReportService.displayContinentCapitalCities("Asia");          // UC-18
-                capitalCityReportService.displayRegionCapitalCities("Western Europe");   // UC-19
+//
+//                capitalCityReportService.displayWorldCapitalCities();                    // UC-17
+//                capitalCityReportService.displayContinentCapitalCities("Asia");          // UC-18
+//                capitalCityReportService.displayRegionCapitalCities("Western Europe");   // UC-19
+//                capitalCityReportService.displayTopNWorldCapitalCities(10);                    // UC-20
+//                capitalCityReportService.displayTopNContinentCapitalCities("Europe", 5);       // UC-21
+//                capitalCityReportService.displayTopNRegionCapitalCities("Western Europe", 5);  // UC-22
 
             } finally {
                 try {

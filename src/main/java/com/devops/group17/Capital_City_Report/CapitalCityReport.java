@@ -10,6 +10,15 @@ public class CapitalCityReport {
     private String country;
     private long population;
 
+    public CapitalCityReport() {
+    }
+
+    public CapitalCityReport(String name, String country, long population) {
+        this.name = name;
+        this.country = country;
+        this.population = population;
+    }
+
     public String getName() {
         return name;
     }

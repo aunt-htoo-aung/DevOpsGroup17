@@ -9,6 +9,15 @@ public class LanguageReport {
     private long totalSpeakers;
     private double worldPercentage;
 
+    public LanguageReport() {
+    }
+
+    public LanguageReport(String language, long totalSpeakers, double worldPercentage) {
+        this.language = language;
+        this.totalSpeakers = totalSpeakers;
+        this.worldPercentage = worldPercentage;
+    }
+
     public String getLanguage() {
         return language;
     }
@@ -31,5 +40,14 @@ public class LanguageReport {
 
     public void setWorldPercentage(double worldPercentage) {
         this.worldPercentage = worldPercentage;
+    }
+
+    @Override
+    public String toString() {
+        return "LanguageReport{" +
+                "language='" + language + '\'' +
+                ", totalSpeakers=" + totalSpeakers +
+                ", worldPercentage=" + worldPercentage +
+                '}';
     }
 }
