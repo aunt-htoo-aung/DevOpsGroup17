@@ -18,6 +18,10 @@ public class CapitalCityReportService {
         this.capitalCityReportDAO = new CapitalCityReportDAO(con);
     }
 
+    public CapitalCityReportService(CapitalCityReportDAO capitalCityReportDAO) {
+        this.capitalCityReportDAO = capitalCityReportDAO;
+    }
+
     /**
      * UC-17: Fetches all capital cities in the world and prints them as a table.
      */
