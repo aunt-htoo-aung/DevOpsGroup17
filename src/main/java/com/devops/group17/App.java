@@ -4,6 +4,7 @@ import com.devops.group17.CityReport.CityReportService;
 import com.devops.group17.CountryReport.CountryReportService;
 import com.devops.group17.LanguageReport.LanguageReportService;
 import com.devops.group17.Capital_City_Report.CapitalCityReportService;
+import com.devops.group17.Population_Report.PopulationReportService;
 
 public class App {
     public static void main(String[] args) {

@@ -17,9 +17,12 @@ public class LanguageReportService {
         this.languageReportDAO = new LanguageReportDAO(con);
     }
 
+<<<<<<< HEAD
+=======
     public LanguageReportService(LanguageReportDAO languageReportDAO) {
         this.languageReportDAO = languageReportDAO;
     }
+>>>>>>> develop
 
     /**
      * Fetches the language report data and prints it as a table.
